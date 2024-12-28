@@ -2,6 +2,7 @@ import axios from "axios";
 import React, { useState } from "react";
 import { useCookies } from "react-cookie";
 import { useSelector, useDispatch } from "react-redux";
+<<<<<<< HEAD
 import { useHistory, Redirect } from "react-router-dom";
 import { signIn } from "../authSlice";
 import { Header } from "../components/Header";
@@ -10,12 +11,26 @@ import "./signUp.css";
 
 export const SignUp = () => {
   const history = useHistory();
+=======
+import { useNavigate, Navigate } from "react-router-dom";
+import { signIn } from "../authSlice";
+import { Header } from "../components/Header";
+import { url } from "../const";
+import "./signUp.scss";
+
+export const SignUp = () => {
+  const navigate = useNavigate();
+>>>>>>> 28b21a0 (クリア済み)
   const auth = useSelector((state) => state.auth.isSignIn);
   const dispatch = useDispatch();
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
   const [password, setPassword] = useState("");
+<<<<<<< HEAD
   const [errorMessage, setErrorMessge] = useState();
+=======
+  const [errorMessage, setErrorMessge] = useState("");
+>>>>>>> 28b21a0 (クリア済み)
   const [cookies, setCookie, removeCookie] = useCookies();
   const handleEmailChange = (e) => setEmail(e.target.value);
   const handleNameChange = (e) => setName(e.target.value);
@@ -24,14 +39,23 @@ export const SignUp = () => {
     const data = {
       email: email,
       name: name,
+<<<<<<< HEAD
       password: password
     };
 
     axios.post(`${url}/users`, data)
+=======
+      password: password,
+    };
+
+    axios
+      .post(`${url}/users`, data)
+>>>>>>> 28b21a0 (クリア済み)
       .then((res) => {
         const token = res.data.token;
         dispatch(signIn());
         setCookie("token", token);
+<<<<<<< HEAD
         history.push("/");
       })
       .catch((err) => {
@@ -40,6 +64,16 @@ export const SignUp = () => {
 
       if(auth) return <Redirect to="/" />
   }
+=======
+        navigate("/");
+      })
+      .catch((err) => {
+        setErrorMessge(`サインアップに失敗しました。 ${err}`);
+      });
+
+    if (auth) return <Navigate to="/" />;
+  };
+>>>>>>> 28b21a0 (クリア済み)
   return (
     <div>
       <Header />
@@ -47,6 +81,7 @@ export const SignUp = () => {
         <h2>新規作成</h2>
         <p className="error-message">{errorMessage}</p>
         <form className="signup-form">
+<<<<<<< HEAD
           <label>メールアドレス</label><br />
           <input type="email" onChange={handleEmailChange} className="email-input" /><br />
           <label>ユーザ名</label><br />
@@ -59,3 +94,37 @@ export const SignUp = () => {
     </div>
   )
 }
+=======
+          <label>メールアドレス</label>
+          <br />
+          <input
+            type="email"
+            onChange={handleEmailChange}
+            className="email-input"
+          />
+          <br />
+          <label>ユーザ名</label>
+          <br />
+          <input
+            type="text"
+            onChange={handleNameChange}
+            className="name-input"
+          />
+          <br />
+          <label>パスワード</label>
+          <br />
+          <input
+            type="password"
+            onChange={handlePasswordChange}
+            className="password-input"
+          />
+          <br />
+          <button type="button" onClick={onSignUp} className="signup-button">
+            作成
+          </button>
+        </form>
+      </main>
+    </div>
+  );
+};
+>>>>>>> 28b21a0 (クリア済み)

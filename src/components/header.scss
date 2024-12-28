@@ -1,0 +1,61 @@
+@charset "utf-8";
+
+/* 全体のリセット */
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.header {
+  width: 100vw; /* ビューポート幅を基準に設定 */
+  height: 80px;
+  background-color: #242F9B;
+  color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px; /* 左右に余白を設定 */
+}
+
+.sign-out-button {
+  color: #ffffff;
+  margin: 0;
+  padding: 10px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+/* レスポンシブ対応: タブレット用 */
+@media (max-width: 768px) {
+  .header {
+    height: 70px;
+    padding: 0 15px;
+  }
+
+  .sign-out-button {
+    margin-left: auto;
+    padding: 8px;
+  }
+}
+
+/* レスポンシブ対応: スマートフォン用 */
+@media (max-width: 320px) {
+  .header {
+    height: 60px;
+    padding: 0 10px;
+  }
+
+  .sign-out-button {
+    margin-left: auto;
+    padding: 6px;
+  }
+}

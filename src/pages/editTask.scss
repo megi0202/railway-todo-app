@@ -1,0 +1,81 @@
+@charset "utf-8";
+
+.edit-task {
+  width: 1000px;
+  margin: 0 auto;
+}
+
+/* レスポンシブ対応: タブレット用 */
+@media (max-width: 768px) {
+  .edit-task {
+    width: 90%; /* 幅を90%に調整して、画面に合わせて表示 */
+  }
+
+  .edit-task-title,
+  .edit-task-detail {
+    width: 80%; /* 入力フィールドの幅を調整 */
+    margin-bottom: 20px;
+  }
+
+  .edit-task-form {
+    padding: 0 20px; /* 内部余白を追加 */
+  }
+
+  .delete-task-button,
+  .edit-task-button {
+    width: 100%; /* ボタンが横並びにならないように、ボタンを100%に設定 */
+    height: 45px;
+    margin: 10px 0; /* ボタン間の余白を調整 */
+  }
+}
+
+/* レスポンシブ対応: スマートフォン用 */
+@media (max-width: 320px) {
+  .edit-task {
+    width: 90%; /* 幅をさらに縮めて、スマホサイズに対応 */
+  }
+
+  .edit-task-title,
+  .edit-task-detail {
+    width: 100%; /* タイトルと詳細の入力フィールドを最大幅に */
+    margin-bottom: 15px;
+  }
+
+  .delete-task-button,
+  .edit-task-button {
+    width: 100%; /* ボタンを全幅に設定 */
+    height: 50px; /* 高さを調整してタッチ操作をしやすく */
+    margin: 10px 0; /* ボタン間の余白を調整 */
+  }
+}
+
+.edit-task-form {
+  color: #555555;
+}
+
+.edit-task-title,
+.edit-task-detail {
+  width: 300px;
+  margin-bottom: 25px;
+}
+
+.delete-task-button {
+  color: #ff3333;
+  border: solid 1px #ff3333;
+  width: 80px;
+  height: 40px;
+  margin: 25px 5px;
+  border-radius: 5px;
+}
+
+.edit-task-button {
+  background-color: #242F9B;
+  color: #ffffff;
+  width: 80px;
+  height: 40px;
+  border-radius: 5px;
+}
+
+.error-message {
+  color: #ff3333;
+}

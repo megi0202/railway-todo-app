@@ -1,0 +1,177 @@
+/* 全体に box-sizing を適用 */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* 基本設定 */
+.taskList {
+  margin: 10px auto;  /* マージンをさらに小さく */
+  list-style: none;
+  width: 100%;
+  max-width: 100%;
+  
+  padding: 0 20px; /* 内側の左右余白を追加 */
+  overflow-x: hidden;
+}
+
+.list-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.list-menu {
+  text-align: right;
+}
+
+.list-tab {
+  list-style: none;
+  display: flex;
+  overflow-x: auto;
+  flex-wrap: nowrap;
+  width: 100%;
+}
+
+.list-tab-item {
+  flex-shrink: 0;
+  width: 100px;  /* タブ幅をさらに小さく */
+  padding: 0 12px;  /* パディングを小さく */
+  text-overflow: normal;
+  margin-right: 3px;  /* マージンを小さく */
+  border: solid 1px #242F9B;
+  justify-content: center;
+  align-items: center;
+}
+
+.active {
+  background-color: #242F9B;
+  color: #ffffff;
+}
+
+.tasks {
+  margin-top: 15px;  /* マージンを小さく */
+}
+
+.tasks-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.task-item {
+  list-style-type: none;
+  height: auto;
+  width: 100%;
+  background-color: #f5f5f5;
+  padding-left: 15px;  /* パディングを減らす */
+  font-size: small;  /* フォントサイズをさらに小さく */
+  border: solid 1px #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-bottom: 5px;  /* タスク内余白を減らす */
+}
+
+.task-item-link {
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  color: #000000;
+  padding-bottom: 3px;  /* タスク内容と期限間の余白を減らす */
+}
+
+.task-item div {
+  margin-bottom: 3px;  /* 各テキスト間の余白を減らす */
+}
+
+.error-message {
+  color: #ff3333;
+}
+
+.display-select-wrapper {
+  width: 100px;  /* 幅をさらに小さく */
+  margin: 0 0 20px auto;
+}
+
+.display-select {
+  width: 100%;
+}
+
+/* レスポンシブ対応: タブレット用 */
+@media (max-width: 768px) {
+  .taskList {
+    margin: 5px;  /* マージンをさらに小さく */
+    padding: 0 20px; /* 内側の左右余白を追加 */
+  }
+
+  .list-tab {
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  .list-tab-item {
+    width: 60px;  /* タブの幅をさらに小さく */
+    padding: 0 10px;
+    margin-right: 3px;
+  }
+
+  .tasks-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .task-item {
+    width: 100%;
+    font-size: small;  /* フォントサイズを小さく */
+    padding-left: 8px;  /* パディングを減らす */
+  }
+
+  .task-item div {
+    margin-bottom: 2px;  /* 余白をさらに小さく */
+  }
+
+  .display-select-wrapper {
+    width: 100px;  /* 幅をさらに小さく */
+  }
+}
+
+/* レスポンシブ対応: スマートフォン用 */
+@media (max-width: 320px) {
+  .taskList {
+    margin: 5px;  /* マージンを最小化 */
+    padding: 0 20px; /* 内側の左右余白を追加 */
+  }
+
+  .list-tab {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .list-tab-item {
+    width: 85%;  /* タブアイテム幅をさらに広げる */
+    margin-right: 0;
+    padding: 0 8px;
+  }
+
+  .tasks-header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .task-item {
+    width: 100%;
+    font-size: x-small;  /* フォントサイズを最小に */
+    padding-left: 6px;  /* パディングをさらに減らす */
+    box-sizing: border-box;
+  }
+
+  .task-item div {
+    margin-bottom: 1px;  /* 余白を最小化 */
+  }
+
+  .display-select-wrapper {
+    width: 100px;  /* 幅を最小化 */
+  }
+}

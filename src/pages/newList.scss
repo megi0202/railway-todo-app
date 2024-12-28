@@ -1,0 +1,63 @@
+@charset "utf-8";
+
+.new-list {
+  width: 1000px;
+  margin: 0 auto;
+}
+
+/* レスポンシブ対応: タブレット用 */
+@media (max-width: 768px) {
+  .new-list {
+    width: 90%; /* 幅を90%に調整して、画面に合わせて表示 */
+  }
+
+  .new-list-title {
+    width: 80%; /* 入力フィールドの幅を調整 */
+    margin-bottom: 20px;
+  }
+
+  .new-list-form {
+    padding: 0 20px; /* 内部余白を追加 */
+  }
+
+  .new-list-button {
+    width: 100%; /* ボタンが横並びにならないように、ボタンを100%に設定 */
+    height: 45px;
+    margin: 10px 0; /* ボタン間の余白を調整 */
+  }
+}
+
+/* レスポンシブ対応: スマートフォン用 */
+@media (max-width: 320px) {
+  .new-list {
+    width: 90%; /* 幅をさらに縮めて、スマホサイズに対応 */
+  }
+
+  .new-list-title {
+    width: 100%; /* タイトルの入力フィールドを最大幅に */
+    margin-bottom: 15px;
+  }
+
+  .new-list-button {
+    width: 100%; /* ボタンを全幅に設定 */
+    height: 50px; /* 高さを調整してタッチ操作をしやすく */
+    margin: 10px 0; /* ボタン間の余白を調整 */
+  }
+}
+
+.new-list-form {
+  color: #555555;
+}
+
+.new-list-title {
+  width: 300px;
+  margin-bottom: 25px;
+}
+
+.new-list-button {
+  background-color: #242F9B;
+  color: #ffffff;
+  width: 80px;
+  height: 40px;
+  border-radius: 5px;
+}

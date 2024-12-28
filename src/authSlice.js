@@ -4,8 +4,13 @@ import { Cookies } from "react-cookie";
 const cookie = new Cookies();
 
 const initialState = {
+<<<<<<< HEAD
   isSignIn: cookie.get("token") !== undefined
 }
+=======
+  isSignIn: cookie.get("token") !== undefined,
+};
+>>>>>>> 28b21a0 (クリア済み)
 
 export const authSlice = createSlice({
   name: "auth",
@@ -17,7 +22,11 @@ export const authSlice = createSlice({
     signOut: (state) => {
       state.isSignIn = false;
     },
+<<<<<<< HEAD
   }
+=======
+  },
+>>>>>>> 28b21a0 (クリア済み)
 });
 
 export const { signIn, signOut } = authSlice.actions;

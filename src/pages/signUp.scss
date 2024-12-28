@@ -1,0 +1,68 @@
+@charset "utf-8";
+
+.signup {
+  width: 500px;
+  margin: 0 auto;
+}
+
+/* レスポンシブ対応: タブレット用 */
+@media (max-width: 768px) {
+  .signup {
+    width: 80%; /* 幅を80%に調整して、画面に合わせて表示 */
+  }
+
+  .email-input,
+  .name-input,
+  .password-input {
+    font-size: medium; /* フォントサイズを少し小さく調整 */
+    height: 40px; /* 入力フィールドの高さを少し調整 */
+  }
+
+  .signup-button {
+    width: 100%; /* ボタンを画面幅に合わせて100%に */
+    height: 45px;
+  }
+}
+
+/* レスポンシブ対応: スマートフォン用 */
+@media (max-width: 320px) {
+  .signup {
+    width: 90%; /* 幅をさらに縮めて、スマホサイズに対応 */
+  }
+
+  .email-input,
+  .name-input,
+  .password-input {
+    font-size: medium; /* フォントサイズを少し小さく調整 */
+    height: 45px; /* 入力フィールドの高さを調整 */
+  }
+
+  .signup-button {
+    width: 100%; /* ボタンを全幅に設定 */
+    height: 50px; /* 高さを調整してタッチ操作をしやすく */
+  }
+}
+
+.signup-form {
+  margin: 25px 0;
+  color: #555555;
+}
+
+.email-input, .name-input, .password-input {
+  width: 100%;
+  font-size: large;
+  height: 30px;
+  margin-bottom: 25px;
+}
+
+.signup-button {
+  background-color: #242F9B;
+  color: #ffffff;
+  width: 100px;
+  height: 40px;
+  border-radius: 5px;
+}
+
+.error-message {
+  color: #ff3333;
+}

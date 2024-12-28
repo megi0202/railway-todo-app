@@ -1,19 +1,35 @@
 import React from "react";
+<<<<<<< HEAD
 import ReactDOM from "react-dom";
 import "./index.css";
+=======
+//import ReactDOM from "react-dom";
+import { createRoot } from "react-dom/client";
+import "./index.scss";
+>>>>>>> 28b21a0 (クリア済み)
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { CookiesProvider } from "react-cookie";
 import { Provider } from "react-redux";
+<<<<<<< HEAD
 import { store } from "./store"
 
 ReactDOM.render(
+=======
+import { store } from "./store";
+
+const root = createRoot(document.getElementById("root"));
+root.render(
+>>>>>>> 28b21a0 (クリア済み)
   <Provider store={store}>
     <CookiesProvider>
       <App />
     </CookiesProvider>
   </Provider>,
+<<<<<<< HEAD
   document.getElementById("root")
+=======
+>>>>>>> 28b21a0 (クリア済み)
 );
 
 // If you want to start measuring performance in your app, pass a function

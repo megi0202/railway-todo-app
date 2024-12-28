@@ -1,0 +1,78 @@
+@charset "utf-8";
+
+.edit-list {
+  width: 1000px;
+  margin: 0 auto;
+}
+
+/* レスポンシブ対応: タブレット用 */
+@media (max-width: 768px) {
+  .edit-list {
+    width: 90%; /* 幅を90%にして、画面に合わせて調整 */
+  }
+
+  .edit-list-title {
+    width: 80%; /* タイトルの幅も調整 */
+    margin-bottom: 20px;
+  }
+
+  .edit-list-form {
+    padding: 0 20px; /* 内部の余白を追加 */
+  }
+
+  .delete-list-button,
+  .edit-list-button {
+    width: 100%; /* ボタンが横並びにならないように、ボタンを100%に設定 */
+    height: 45px;
+    margin: 10px 0; /* ボタン間の余白を調整 */
+  }
+}
+
+/* レスポンシブ対応: スマートフォン用 */
+@media (max-width: 320px) {
+  .edit-list {
+    width: 90%; /* 幅をさらに縮めて、スマホサイズに対応 */
+  }
+
+  .edit-list-title {
+    width: 100%; /* タイトルの幅を最大化 */
+    margin-bottom: 15px;
+  }
+
+  .delete-list-button,
+  .edit-list-button {
+    width: 100%; /* ボタンを全幅に設定 */
+    height: 50px; /* 高さを調整して、タッチ操作をしやすく */
+    margin: 10px 0; /* ボタン間の余白を調整 */
+  }
+}
+
+.edit-list-form {
+  color: #555555;
+}
+
+.edit-list-title {
+  width: 300px;
+  margin-bottom: 25px;
+}
+
+.delete-list-button {
+  color: #ff3333;
+  border: solid 1px #ff3333;
+  width: 80px;
+  height: 40px;
+  margin: 25px 5px;
+  border-radius: 5px;
+}
+
+.edit-list-button {
+  background-color: #242F9B;
+  color: #ffffff;
+  width: 80px;
+  height: 40px;
+  border-radius: 5px;
+}
+
+.error-message {
+  color: #ff3333;
+}
